@@ -12,9 +12,12 @@
       <v-text-field label="Фамилия" style="width: 100%" />
       <v-text-field label="Отчество" style="width: 100%" />
       <v-text-field label="Почта" style="width: 100%" />
-      <v-btn @click="$router.replace('/')" class="mt-3 my-6" width="120"
+      <v-btn @click="$router.replace('/')" class="mt-3 mb-3" width="120"
         >Вперед!</v-btn
       >
+      <v-btn icon color="indigo" x-large class="mb-6">
+        <v-icon>mdi-fingerprint</v-icon>
+      </v-btn>
     </v-form>
   </v-card>
 </template>

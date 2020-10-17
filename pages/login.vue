@@ -10,9 +10,12 @@
     <v-form class="d-flex flex-column align-center px-6">
       <v-text-field label="Логин" style="width: 100%" />
       <v-text-field label="Пароль" style="width: 100%" />
-      <v-btn @click="$router.replace('/')" class="mt-3 mb-6" width="120"
+      <v-btn @click="$router.replace('/')" class="mt-3 mb-3" width="120"
         >Войти</v-btn
       >
+      <v-btn icon color="indigo" x-large class="mb-6">
+        <v-icon>mdi-fingerprint</v-icon>
+      </v-btn>
     </v-form>
   </v-card>
 </template>
