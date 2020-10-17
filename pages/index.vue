@@ -1,93 +1,44 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <div class="text-center">
-        <logo />
-        <vuetify-logo />
-      </div>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>
-            Vuetify is a progressive Material Design component framework for
-            Vue.js. It was designed to empower developers to create amazing
-            applications.
-          </p>
-          <p>
-            For more information on Vuetify, check out the
-            <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation </a
-            >.
-          </p>
-          <p>
-            If you have questions, please join the official
-            <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord </a
-            >.
-          </p>
-          <p>
-            Find a bug? Report it on the github
-            <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board </a
-            >.
-          </p>
-          <p>
-            Thank you for developing with Vuetify and I look forward to bringing
-            more exciting features in the future.
-          </p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3" />
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br />
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn color="primary" nuxt to="/inspire"> Continue </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-col>
-  </v-row>
+  <div>
+    <header
+      style="height: 56px; box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.6)"
+    ></header>
+    <main class="d-flex">
+      <aside
+        class="d-flex flex-column pl-3 pr-5"
+        style="
+          width: 350px;
+          height: 100vh;
+          box-shadow: 10px 0 10px -10px rgba(0, 0, 0, 0.4);
+        "
+      >
+        <div class="py-2" style="box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.2)">
+          Документы на подпись
+        </div>
+        <div class="py-2" style="box-shadow: 0 3px 2px -2px rgba(0, 0, 200, 0.9)">
+          Подписанные документы
+        </div>
+      </aside>
+      <aside
+        class="d-flex flex-column pl-3 pr-5"
+        style="
+          width: 200px;
+          height: 100vh;
+          box-shadow: 10px 0px 10px -10px rgba(0, 0, 0, 0.4);
+        "
+      >
+        <div class="py-2" style="box-shadow: 0 3px 2px -2px rgba(0, 0, 200, 0.9)">
+          Документ 1
+        </div>
+        <div class="py-2" style="box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.2)">
+          Документ 2
+        </div>
+      </aside>
+      <v-container> Документ 1... </v-container>
+    </main>
+  </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
-
-export default {
-  components: {
-    Logo,
-    VuetifyLogo,
-  },
-}
+export default {}
 </script>
