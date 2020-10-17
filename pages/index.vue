@@ -36,7 +36,15 @@
           </v-list-item-group>
         </v-list>
       </aside>
-      <v-container> Документ 1... </v-container>
+      <v-container>
+        <!-- <iframe
+          src="https://view.officeapps.live.com/op/embed.aspx?src=http://remote.url.tld/path/to/document.doc"
+          width="1366px"
+          height="623px"
+          frameborder="0"
+        ></iframe> -->
+        <iframe src='https://view.officeapps.live.com/op/embed.aspx?src=http://www.learningaboutelectronics.com/Articles/NP-modernization-act-new-york-state.doc' width='80%' height='565px' frameborder='0'> </iframe>
+      </v-container>
     </main>
   </div>
 </template>
