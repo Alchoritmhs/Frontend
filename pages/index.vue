@@ -5,32 +5,36 @@
     ></header>
     <main class="d-flex">
       <aside
-        class="d-flex flex-column pl-3 pr-5"
+        class="d-flex flex-column"
         style="
-          width: 370px;
+          width: 400px;
           height: 100vh;
-          font-size: 15.5px;
-          box-shadow: 10px 0 10px -10px rgba(0, 0, 0, 0.2);
+          font-size: 15px;
+          border-right: 1px solid rgba(0, 0, 0, 0.05);
         "
       >
-        <div class="py-2" style="color: rgba(0, 0, 0, 0.6)">
-          Документы на подпись
-        </div>
-        <div class="py-2 indigo--text text--lighten-1" style="">
-          Подписанные документы
-        </div>
+        <v-list shaped class="mt-1">
+          <v-list-item-group v-model="selectedMenuOption" color="primary">
+            <v-list-item :key="0">Документы на подпись</v-list-item>
+            <v-list-item :key="1">Подписанные документы</v-list-item>
+          </v-list-item-group>
+        </v-list>
       </aside>
       <aside
-        class="d-flex flex-column pl-3 pr-5"
+        class="d-flex flex-column ml-1"
         style="
-          width: 200px;
+          width: 220px;
           height: 100vh;
           font-size: 14px;
-          box-shadow: 10px 0px 10px -10px rgba(0, 0, 0, 0.2);
+          box-shadow: 10px 0px 10px -10px rgba(0, 0, 0, 0.1);
         "
       >
-        <div class="py-2 indigo--text text--lighten-1" style="">Документ 1</div>
-        <div class="py-2" style="color: rgba(0, 0, 0, 0.6)">Документ 2</div>
+        <v-list shaped class="mt-1">
+          <v-list-item-group color="primary">
+            <v-list-item>Документ 1</v-list-item>
+            <v-list-item>Документ 2</v-list-item>
+          </v-list-item-group>
+        </v-list>
       </aside>
       <v-container> Документ 1... </v-container>
     </main>
@@ -38,5 +42,11 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      selectedMenuOption: 0,
+    }
+  },
+}
 </script>
