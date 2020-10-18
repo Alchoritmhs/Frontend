@@ -4,6 +4,7 @@
       class="d-flex align-center"
       style="height: 56px; box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.4)"
     >
+    <v-icon large color="primary" class="ml-16">mdi-briefcase-check</v-icon>
       <v-avatar
         v-if="user"
         @click="user = !user"
@@ -59,7 +60,7 @@
           </v-list-item-group>
         </v-list>
       </aside>
-      <v-container>
+      <v-container class="d-flex">
         <!-- 
           https://www.npmjs.com/package/ngx-doc-viewer 
           https://www.npmjs.com/package/mammoth?activeTab=dependents
@@ -72,6 +73,9 @@
           frameborder="0"
         >
         </iframe>
+        <v-btn @click="signed=true" :color="signed ? 'success' : 'primary'" class="mx-auto mt-5">{{
+          signed ? 'Подписано' : 'Подписать'
+        }}</v-btn>
       </v-container>
     </main>
   </div>
@@ -87,6 +91,7 @@ export default {
     return {
       selectedMenuOption: 0,
       user: true,
+      signed: false,
     }
   },
 }
