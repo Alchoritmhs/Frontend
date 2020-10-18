@@ -4,7 +4,7 @@
       class="d-flex align-center"
       style="height: 56px; box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.4)"
     >
-    <v-icon large color="primary" class="ml-16">mdi-briefcase-check</v-icon>
+      <v-icon large color="primary" class="ml-16">mdi-briefcase-check</v-icon>
       <v-avatar
         v-if="user"
         @click="user = !user"
@@ -60,22 +60,31 @@
           </v-list-item-group>
         </v-list>
       </aside>
-      <v-container class="d-flex">
+      <v-container class="">
+        <div class="d-flex align-center">
+          <v-btn
+            @click="signed = true"
+            :color="signed ? 'success' : 'primary'"
+            >{{ signed ? 'Подписано' : 'Подписать' }}</v-btn
+          >
+          <v-btn icon color="indigo" x-large class="ml-2">
+            <v-icon>mdi-fingerprint</v-icon>
+          </v-btn>
+        </div>
         <!-- 
           https://www.npmjs.com/package/ngx-doc-viewer 
           https://www.npmjs.com/package/mammoth?activeTab=dependents
           https://mike.zwobble.org/projects/mammoth/
         -->
+
+        <!-- src="https://view.officeapps.live.com/op/embed.aspx?src=http://www.learningaboutelectronics.com/Articles/NP-modernization-act-new-york-state.doc" -->
         <iframe
-          src="https://view.officeapps.live.com/op/embed.aspx?src=http://www.learningaboutelectronics.com/Articles/NP-modernization-act-new-york-state.doc"
-          width="80%"
+          src="https://docs.google.com/document/d/1VBJSBR9-G0CV2BvuJRdYMrhEYCeiSN8q/edit"
+          width="100%"
           height="90%"
           frameborder="0"
         >
         </iframe>
-        <v-btn @click="signed=true" :color="signed ? 'success' : 'primary'" class="mx-auto mt-5">{{
-          signed ? 'Подписано' : 'Подписать'
-        }}</v-btn>
       </v-container>
     </main>
   </div>
